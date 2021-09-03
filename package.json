@@ -31,7 +31,8 @@
   "homepage": "https://github.com/PabloMendozaxd/angularjs-crud#readme",
   "dependencies": {
     "angular": "^1.8.2",
-    "bootstrap": "3.3.x"
+    "bootstrap": "3.3.x",
+    "angular-resource": "1.8.x"
   },
   "devDependencies": {
     "angular-mocks": "1.8.x",

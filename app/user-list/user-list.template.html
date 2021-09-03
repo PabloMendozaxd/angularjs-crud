@@ -1,8 +1,8 @@
-<ul class="list-group">
-    <li  class="list-group-item" ng-repeat="user in $ctrl.users">
-      <span>{{user.name}}</span>
-      <p>{{user.country}}</p>
-      <button>Update</button>
-      <button>Delete</button>
+<ul  class="col-sm-10" class="list-unstyled" class="list-group">
+    <li class="row" class="list-group-item" ng-repeat="user in $ctrl.users">
+      <span class="col-md-3">{{user.name}}</span>
+      <p class="col-md-3">{{user.country}}</p>
+      <button class="col-md-1 btn btn-primary">Update</button>
+      <button class="col-md-1 btn btn-danger">Delete</button>
     </li>
   </ul>

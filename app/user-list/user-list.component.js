@@ -6,9 +6,15 @@ angular.
     templateUrl: 'user-list/user-list.template.html',
     controller: function UserListController($http) {
       var self = this;
-      
-      $http.get('users/users.json').then(function(response) {
+
+      $http.get('users/users.json').then(function (response) {
         self.users = response.data;
       });
+
+      self.createUser = () => {
+        self.users.push({ name: self.name, country: self.country });
+        self.name = '';
+        self.country = '';
+      };
     }
   });

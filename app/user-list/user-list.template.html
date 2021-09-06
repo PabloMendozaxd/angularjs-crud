@@ -1,8 +1,17 @@
-<ul  class="col-sm-10" class="list-unstyled" class="list-group">
-    <li class="row" class="list-group-item" ng-repeat="user in $ctrl.users">
-      <span class="col-md-3">{{user.name}}</span>
-      <p class="col-md-3">{{user.country}}</p>
-      <button class="col-md-1 btn btn-primary">Update</button>
-      <button class="col-md-1 btn btn-danger">Delete</button>
-    </li>
-  </ul>
+<h1>User Information</h1>
+
+<form ng-submit="$ctrl.createUser()">
+  <input type="text" ng-model="$ctrl.name" size="30" placeholder="Name">
+  <input type="text" ng-model="$ctrl.country" size="30" placeholder="Country">
+  <input class="btn-success" type="submit" value="Create">
+</form>
+
+
+<ul class="col-sm-10" class="list-unstyled" class="list-group">
+  <li class="row" class="list-group-item" ng-repeat="user in $ctrl.users">
+    <span class="col-md-3">{{user.name}}</span>
+    <span class="col-md-3">{{user.country}}</span>
+    <button class="col-md-1 btn btn-primary" ng-click="$ctrl.editUser(user)">Update</button>
+    <button class="col-md-1 btn btn-danger" ng-click="$ctrl.editUser(user)">Delete</button>
+  </li>
+</ul>

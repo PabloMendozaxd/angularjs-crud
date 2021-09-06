@@ -21,12 +21,16 @@ angular.
         self.name = user.name;
         self.country = user.country;
       };
-      // self.updateUser=(user)=>{
-      //   console.log(user)
-      //   self.name = user.name;
-      //   self.country = user.country;
-      //   console.log(self.users)
-      //   self.users.splice(self.users.indexOf(user), 1, { name: "modified", country: "modified" });
-      // };
+
+      self.updateUser=(user)=>{
+        // console.log(self.users.includes('hola'))
+        // console.log(self.users.indexOf({"name":"Gloria Figueroa","country":"Mexico"}))
+        self.users.splice(self.users.indexOf(user), 1, { name: "modified", country: "modified" });
+      };
+
+      self.deleteUser=user=>{
+        console.log(self.users.indexOf(user))
+        self.users.splice(self.users.indexOf(user),1)
+      }
     }
   });

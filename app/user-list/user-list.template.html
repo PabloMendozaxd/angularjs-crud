@@ -1,9 +1,11 @@
 <h1>User Information</h1>
 
-<form ng-submit="$ctrl.createUser()">
+<form>
   <input type="text" ng-model="$ctrl.name" size="30" placeholder="Name">
   <input type="text" ng-model="$ctrl.country" size="30" placeholder="Country">
-  <input class="btn-success" type="submit" value="Create">
+  <button class="btn btn-success" ng-click="$ctrl.createUser(user)">Create</button>
+  <button class="btn btn-primary" ng-click="$ctrl.updateUser(user)">Update</button>
+  <button class="btn btn-danger" ng-click="$ctrl.deleteUser(user)">Delete</button>
 </form>
 
 
@@ -11,7 +13,6 @@
   <li class="row" class="list-group-item" ng-repeat="user in $ctrl.users">
     <span class="col-md-3">{{user.name}}</span>
     <span class="col-md-3">{{user.country}}</span>
-    <button class="col-md-1 btn btn-primary" ng-click="$ctrl.editUser(user)">Update</button>
-    <button class="col-md-1 btn btn-danger" ng-click="$ctrl.editUser(user)">Delete</button>
+    <button class="col-md-1 btn btn-danger" ng-click="$ctrl.selectUser(user)">Select</button>
   </li>
 </ul>

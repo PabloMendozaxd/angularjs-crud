@@ -16,5 +16,17 @@ angular.
         self.name = '';
         self.country = '';
       };
+
+      self.selectUser=(user)=>{
+        self.name = user.name;
+        self.country = user.country;
+      };
+      // self.updateUser=(user)=>{
+      //   console.log(user)
+      //   self.name = user.name;
+      //   self.country = user.country;
+      //   console.log(self.users)
+      //   self.users.splice(self.users.indexOf(user), 1, { name: "modified", country: "modified" });
+      // };
     }
   });

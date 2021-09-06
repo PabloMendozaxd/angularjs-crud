@@ -11,21 +11,21 @@ angular.
         self.users = response.data;
       });
 
-      self.createUser = () => {
+      self.createUser = (user) => {
+        console.log(user)
         self.users.push({ name: self.name, country: self.country });
         self.name = '';
         self.country = '';
       };
 
       self.selectUser=(user)=>{
+        console.log(user)
         self.name = user.name;
         self.country = user.country;
       };
 
       self.updateUser=(user)=>{
-        // console.log(self.users.includes('hola'))
-        // console.log(self.users.indexOf({"name":"Gloria Figueroa","country":"Mexico"}))
-        self.users.splice(self.users.indexOf(user), 1, { name: "modified", country: "modified" });
+         self.users.splice(self.users.indexOf(user), 1, { name: self.name, country: self.country });
       };
 
       self.deleteUser=user=>{
